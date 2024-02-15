@@ -212,11 +212,9 @@ public class myTestCases {
 				optionsList.get(3).click();;
 				Thread.sleep(2000);
 				
-				 WebElement VisitorSelect =driver.findElement(By.className("tln3e3-1"));
 				
-			     Select myselect =new Select(VisitorSelect);
 			     
-			     myselect.selectByVisibleText("1 Room, 1 Adult, 0 Children");;
+			    //myselect.selectByVisibleText("1 Room, 1 Adult, 0 Children");;
 				
 				
 
@@ -231,14 +229,15 @@ public class myTestCases {
 		
 			Thread.sleep(1000);
 
-			 WebElement VisitorSelect =driver.findElement(By.className("tln3e3-1"));
-			
-		     Select myselect =new Select(VisitorSelect);
-		     
-		     myselect.selectByVisibleText("غرفة واحدة، 2 بالغون، 0 أطفال");
+		    // myselect.selectByVisibleText("غرفة واحدة، 2 بالغون، 0 أطفال");
 				
 		}
-
+		 WebElement VisitorSelect =driver.findElement(By.className("tln3e3-1"));
+			
+	     Select myselect =new Select(VisitorSelect);
+	     
+	    myselect.selectByIndex(1);
+		
 	}
 
 	@AfterTest()
