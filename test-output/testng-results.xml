@@ -1,53 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="10" passed="9" failed="0" skipped="0">
+<testng-results ignored="3" total="12" passed="9" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-17T00:37:40 EET" name="Default suite" finished-at="2024-02-17T00:38:33 EET" duration-ms="53143">
+  <suite started-at="2024-02-17T23:57:49 EET" name="Default suite" finished-at="2024-02-17T23:58:51 EET" duration-ms="62038">
     <groups>
     </groups>
-    <test started-at="2024-02-17T00:37:40 EET" name="Default test" finished-at="2024-02-17T00:38:33 EET" duration-ms="53143">
+    <test started-at="2024-02-17T23:57:49 EET" name="Default test" finished-at="2024-02-17T23:58:51 EET" duration-ms="62038">
       <class name="almosafweb.myTestCases">
-        <test-method is-config="true" signature="SetUp()[pri:0, instance:almosafweb.myTestCases@3c0fae6c]" started-at="2024-02-17T00:37:40 EET" name="SetUp" finished-at="2024-02-17T00:37:43 EET" duration-ms="3315" status="PASS">
+        <test-method is-config="true" signature="SetUp()[pri:0, instance:almosafweb.myTestCases@5241cf67]" started-at="2024-02-17T23:57:49 EET" name="SetUp" finished-at="2024-02-17T23:57:51 EET" duration-ms="2869" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetUp -->
-        <test-method signature="Checklanguage()[pri:1, instance:almosafweb.myTestCases@3c0fae6c]" started-at="2024-02-17T00:37:43 EET" name="Checklanguage" finished-at="2024-02-17T00:37:43 EET" duration-ms="40" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Checklanguage -->
-        <test-method signature="CheckTheCurrency()[pri:2, instance:almosafweb.myTestCases@3c0fae6c]" started-at="2024-02-17T00:37:43 EET" name="CheckTheCurrency" finished-at="2024-02-17T00:37:43 EET" duration-ms="34" status="PASS">
+        <test-method signature="CheckTheCurrency()[pri:3, instance:almosafweb.myTestCases@5241cf67]" started-at="2024-02-17T23:57:51 EET" name="CheckTheCurrency" description="this is to check the currency is SAR" finished-at="2024-02-17T23:57:52 EET" duration-ms="46" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckTheCurrency -->
-        <test-method signature="CheckContactNumber()[pri:3, instance:almosafweb.myTestCases@3c0fae6c]" started-at="2024-02-17T00:37:43 EET" name="CheckContactNumber" finished-at="2024-02-17T00:37:43 EET" duration-ms="27" status="PASS">
+        <test-method signature="checkContactNumber()[pri:4, instance:almosafweb.myTestCases@5241cf67]" started-at="2024-02-17T23:57:52 EET" name="checkContactNumber" finished-at="2024-02-17T23:57:52 EET" duration-ms="31" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CheckContactNumber -->
-        <test-method signature="CheckLogoqitaf()[pri:4, instance:almosafweb.myTestCases@3c0fae6c]" started-at="2024-02-17T00:37:43 EET" name="CheckLogoqitaf" finished-at="2024-02-17T00:37:43 EET" duration-ms="40" status="PASS">
+        </test-method> <!-- checkContactNumber -->
+        <test-method signature="CheckLogoQitaf()[pri:5, instance:almosafweb.myTestCases@5241cf67]" started-at="2024-02-17T23:57:52 EET" name="CheckLogoQitaf" finished-at="2024-02-17T23:57:52 EET" duration-ms="42" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CheckLogoqitaf -->
-        <test-method signature="cheakNOTSelectHotels()[pri:5, instance:almosafweb.myTestCases@3c0fae6c]" started-at="2024-02-17T00:37:43 EET" name="cheakNOTSelectHotels" finished-at="2024-02-17T00:37:43 EET" duration-ms="27" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cheakNOTSelectHotels -->
-        <test-method signature="flightsDate()[pri:6, instance:almosafweb.myTestCases@3c0fae6c]" started-at="2024-02-17T00:37:43 EET" name="flightsDate" finished-at="2024-02-17T00:37:43 EET" duration-ms="59" status="PASS">
+        </test-method> <!-- CheckLogoQitaf -->
+        <test-method signature="flightsDate()[pri:6, instance:almosafweb.myTestCases@5241cf67]" started-at="2024-02-17T23:57:52 EET" name="flightsDate" finished-at="2024-02-17T23:57:52 EET" duration-ms="59" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flightsDate -->
-        <test-method signature="flightDAY2()[pri:8, instance:almosafweb.myTestCases@3c0fae6c]" started-at="2024-02-17T00:37:43 EET" name="flightDAY2" finished-at="2024-02-17T00:37:44 EET" duration-ms="1087" status="PASS">
+        <test-method signature="logoApple()[pri:6, instance:almosafweb.myTestCases@5241cf67]" started-at="2024-02-17T23:57:52 EET" name="logoApple" finished-at="2024-02-17T23:57:52 EET" duration-ms="124" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoApple -->
+        <test-method signature="cheakNOTSelectHotels()[pri:7, instance:almosafweb.myTestCases@5241cf67]" started-at="2024-02-17T23:57:52 EET" name="cheakNOTSelectHotels" finished-at="2024-02-17T23:57:52 EET" duration-ms="25" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cheakNOTSelectHotels -->
+        <test-method signature="flightDAY2()[pri:8, instance:almosafweb.myTestCases@5241cf67]" started-at="2024-02-17T23:57:52 EET" name="flightDAY2" finished-at="2024-02-17T23:57:53 EET" duration-ms="1135" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flightDAY2 -->
-        <test-method signature="flighMonth()[pri:9, instance:almosafweb.myTestCases@3c0fae6c]" started-at="2024-02-17T00:37:44 EET" name="flighMonth" finished-at="2024-02-17T00:37:45 EET" duration-ms="1077" status="PASS">
+        <test-method signature="flighMonth()[pri:9, instance:almosafweb.myTestCases@5241cf67]" started-at="2024-02-17T23:57:53 EET" name="flighMonth" finished-at="2024-02-17T23:57:56 EET" duration-ms="3105" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flighMonth -->
-        <test-method signature="switchLangWeb()[pri:10, instance:almosafweb.myTestCases@3c0fae6c]" started-at="2024-02-17T00:37:45 EET" name="switchLangWeb" finished-at="2024-02-17T00:38:33 EET" duration-ms="47397" status="PASS">
+        <test-method signature="switchLangWeb()[pri:10, instance:almosafweb.myTestCases@5241cf67]" started-at="2024-02-17T23:57:56 EET" name="switchLangWeb" finished-at="2024-02-17T23:58:51 EET" duration-ms="54552" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- switchLangWeb -->
-        <test-method is-config="true" signature="PostTesting()[pri:0, instance:almosafweb.myTestCases@3c0fae6c]" started-at="2024-02-17T00:38:33 EET" name="PostTesting" finished-at="2024-02-17T00:38:33 EET" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="PostTesting()[pri:0, instance:almosafweb.myTestCases@5241cf67]" started-at="2024-02-17T23:58:51 EET" name="PostTesting" finished-at="2024-02-17T23:58:51 EET" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PostTesting -->

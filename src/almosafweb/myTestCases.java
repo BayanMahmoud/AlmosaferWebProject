@@ -17,67 +17,72 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-public class myTestCases {
-
-	String MyWebsite = "https://global.almosafer.com/en";
-	WebDriver driver = new ChromeDriver();
-	SoftAssert softassert = new SoftAssert();
-	Random rand = new Random();
+public class myTestCases extends Parameters {
 
 	@BeforeTest
 	public void SetUp() {
-		driver.manage().window().maximize();
-		driver.get(MyWebsite);
-		WebElement WelcomeScreen = driver
-				.findElement(By.xpath("//button[normalize-space()='Kingdom of Saudi Arabia, SAR']"));
-		WelcomeScreen.click();
-
+	openWebSite();
 	}
 
-	@Test(priority = 1)
-	public void Checklanguage() {
+	@Test(priority = 1,description = " this is happy Scenario test",enabled =false)
+	public void ChecklanguageEN() {
 
-		String actualLang = driver.findElement(By.tagName("Html")).getAttribute("lang");
-		String expectedLang = "en";
-		softassert.assertEquals(actualLang, expectedLang, "This is check of the website use language english");
-
+		
+		ChecklanguageFunction("en");
+		 softassert.assertAll();
 	}
+	
+	
+	
+	@Test(priority = 2 ,description = " this is Sad Scenario test",enabled =false)
+	public void ChecklanguageAR() throws InterruptedException {
 
-	@Test(priority = 2)
-	public void CheckTheCurrency() {
-		WebElement Curruncy = driver.findElement(By.cssSelector(".sc-dRFtgE.fPnvOO"));
-		String actualCurruncy = Curruncy.getText();
-		String expectedcurruncy = "SAR";
-
-		softassert.assertEquals(actualCurruncy, expectedcurruncy);
-
+		
+		ChecklanguageFunction("ar");
+		 softassert.assertAll();
 	}
+	
+	
+	
+	
 
-	@Test(priority = 3)
-	public void CheckContactNumber() {
-		WebElement Number = driver.findElement(By.cssSelector("a[class='sc-hUfwpO bWcsTG'] strong"));
-		String ActualNumber = Number.getText();
-
-		String expectedNum = "+966554400000";
-
-		softassert.assertEquals(ActualNumber, expectedNum);
+	@Test(priority = 3,description = "this is to check the currency is SAR")
+	public void CheckTheCurrency() throws InterruptedException {
+		checkCurrencyFunction("SAR");
+		 softassert.assertAll();
+		
 	}
+	
+	
+	
 
 	@Test(priority = 4)
-	public void CheckLogoqitaf() {
-		WebElement logo = driver.findElement(By.xpath("//div[@class='sc-fihHvN eYrDjb']//*[name()='svg']"));
-		boolean actualTrue = logo.isDisplayed();
-		softassert.assertEquals(actualTrue, true, "This is LOGO 'qitaf'is Displayed at footer");
-
+	public void checkContactNumber() {
+	     contactNumberFunction("+966554400000");
+		 softassert.assertAll();
 	}
 
-	@Test(priority = 5)
+	
+	
+	@Test(priority = 5,enabled =true)
+	public void CheckLogoQitaf() {
+	 logoFunction(driver.findElement(By.xpath("//div[@class='sc-fihHvN eYrDjb']//*[name()='svg']")));
+	 softassert.assertAll();
+	}
+	
+	@Test(priority =6)
+	public void logoApple() {
+		logoFunction(driver.findElement(By.className("sc-ghsgMZ")));
+		 softassert.assertAll();
+	}
+
+	@Test(priority = 7)
 	public void cheakNOTSelectHotels() {
 		WebElement hotelsTab = driver.findElement(By.id("uncontrolled-tab-example-tab-hotels"));
 		String actualSelect = hotelsTab.getDomAttribute("aria-selected");
 		String expectedSelect = "false";
 		softassert.assertEquals(actualSelect, expectedSelect);
-
+		 softassert.assertAll();
 	}
 
 	@Test(priority = 6)
@@ -146,7 +151,7 @@ public class myTestCases {
 
 	@Test(priority = 9)
 	public void flighMonth() throws InterruptedException {
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 		WebElement MonthDepture = driver
 				.findElement(By.cssSelector("div[class='sc-iHhHRJ sc-kqlzXE blwiEW'] span[class='sc-bYnzgO doqpRk']"));
 		WebElement MonthReturn = driver
@@ -167,12 +172,7 @@ public class myTestCases {
 	@Test(priority = 10)
 	public void switchLangWeb() throws InterruptedException {
 		Thread.sleep(1000);
-		Random rand = new Random();
-
-		String[] countryEN = { "Dubai", "Jeddah", "Riyadh" };
-		String[] countryAR = { "دبي", "جدة" };
-		int indexcountryEN = rand.nextInt(countryEN.length);
-		int indexcountryAR = rand.nextInt(countryAR.length);
+	
 
 		// acces the website en or ar randomly
 		String[] myUrls = { "https://global.almosafer.com/en", "https://global.almosafer.com/ar" };
@@ -201,7 +201,7 @@ public class myTestCases {
 			List<WebElement> optionsList = listCity.findElements(By.tagName("li"));
 			Thread.sleep(1000);
 			optionsList.get(3).click();
-			;
+			
 			Thread.sleep(2000);
 
 			// myselect.selectByVisibleText("1 Room, 1 Adult, 0 Children");;
@@ -231,7 +231,7 @@ public class myTestCases {
 
 		searchHotelButton.click();
 
-		Thread.sleep(16000);
+		Thread.sleep(22000);
 		String actualResultSearch = driver.findElement(By.className("klWOBA")).getText();
 
 		// one way assert is search result page
@@ -259,8 +259,6 @@ public class myTestCases {
 
 		Thread.sleep(9000);
 
-		WebElement LowestPriceButton = driver.findElement(By.className("sc-csuNZv"));
-		LowestPriceButton.click();
 
 		WebElement SectionResult = driver.findElement(By.cssSelector(
 				"body > div:nth-child(2) > div:nth-child(5) > div:nth-child(2) > div:nth-child(2) > section:nth-child(2)"));
@@ -273,13 +271,14 @@ public class myTestCases {
 
 		Assert.assertEquals(lowerPriceValue < heigtPriceValue, true,
 				"this check the result are sorted from lower to height Price");
-
+  
+		
 	}
 
 	@AfterTest()
 	public void PostTesting() {
-
-		softassert.assertAll();
+		
+		
 
 	}
 
